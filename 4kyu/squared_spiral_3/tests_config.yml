@@ -1,0 +1,6 @@
+tests: 100
+functions:
+  squared_spiral:
+    n:
+      min: 0
+      max: 100000
