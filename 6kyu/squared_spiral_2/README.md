@@ -1,4 +1,4 @@
-# Square Spiral #2
+# Squared Spiral #2
 
 Given the coordinates (x,y) of a number on a square spiral, find out what is it's index in the sequence, like the drawings bellow.
 

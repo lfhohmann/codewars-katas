@@ -1,3 +1,3 @@
-def square_spiral(x, y):
+def squared_spiral(x, y):
     # Your code here
     return

@@ -1,3 +1,3 @@
-def square_spiral(n):
+def check_vin(number):
     # Your code here
     return
