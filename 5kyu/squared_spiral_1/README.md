@@ -38,4 +38,4 @@ The spiral starts at 0 which is located at coordinates (0,0), number 1 is at (1,
 
 The returned value should be a tuple in the (x,y) format.
 
-`100 fixed tests and another 4950 random tests are performed with small numbers ranging from 0 to 100,000 .Another 4950 random tests are performed with large numbers ranging from 100,000,000 to 100,000,000,000.`
+`100 fixed tests and another 450 random tests are performed with small numbers ranging from 0 to 100,000 .Another 450 random tests are performed with large numbers ranging from 100,000,000,000 to 100,000,000,000,000.`
