@@ -44,7 +44,11 @@ If the modulus 11 of the sum is equal to 10, then the digit is "X".
 
     Ex.: 
     5YJ3E1EAXHF000347 is a valid VIN.
-    
+
+### Input Validation
+
+Input validation is part of the Kata, VINs with lenghts different than 17 characters or containing invalid characters should return `False` as well.
+
 ### Online VIN Checker
 
 [Click here](https://vpic.nhtsa.dot.gov/decoder/CheckDigit/Index/5YJ3E1EA7HF000337) to open an online VIN Checker if you want to better understand how it works.

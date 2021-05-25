@@ -1,5 +1,5 @@
 import codewars_test as test
-from random import choice
+import random
 
 
 def vin_generator():
@@ -35,13 +35,13 @@ def vin_generator():
 
     for char in structure:
         if char == "N":
-            chars.append(choice(NUMBERS))
+            chars.append(random.choice(NUMBERS))
         elif char == "L":
-            chars.append(choice(LETTERS))
+            chars.append(random.choice(LETTERS))
         elif char == "B":
-            chars.append(choice(NUMBERS + LETTERS))
+            chars.append(random.choice(NUMBERS + LETTERS))
         elif char == "C":
-            chars.append(choice(NUMBERS + ["X"]))
+            chars.append(random.choice(NUMBERS + ["X"]))
 
     return "".join(chars)
 
@@ -201,8 +201,8 @@ def tests():
         test.assert_equals(check_vin("5LZ2DY3M4WM555132"), False)
         test.assert_equals(check_vin("9DZWZBDYXFZ985146"), True)
 
-    @test.it("Edge Cases")
-    def fixed_tests():
+    @test.it("Input Validation Tests")
+    def input_validation_tests():
         test.assert_equals(
             check_vin("0eejhf0m8lr011530"), False, "Lower case letters are invalid"
         )
