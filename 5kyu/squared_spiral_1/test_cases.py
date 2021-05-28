@@ -23,10 +23,16 @@ def squared_spiral_solution(n):
 def random_tests(tests, min_n, max_n):
     for _ in range(tests):
         n = random.randint(min_n, max_n)
-        test.assert_equals(squared_spiral(n), squared_spiral_solution(n))
 
-        if squared_spiral(n) != squared_spiral_solution(n):
+        expected = squared_spiral_solution(n)
+        actual = squared_spiral(n)
+
+        if actual != expected:
+            test.assert_equals(actual, expected)
             break
+
+    else:
+        test.pass_()
 
 
 @test.describe("Tests")
