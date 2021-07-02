@@ -2,7 +2,7 @@ const chai = require("chai");
 const assert = chai.assert;
 
 const checkVinSolution = (vin) => {
-  LETTERS = {
+  const LETTERS = {
     A: 1,
     B: 2,
     C: 3,
@@ -28,7 +28,7 @@ const checkVinSolution = (vin) => {
     Z: 9,
   };
 
-  WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
+  const WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
 
   if (vin.length != 17) {
     return false;
@@ -53,6 +53,56 @@ const checkVinSolution = (vin) => {
   } else {
     return vin[8] == check_digit;
   }
+};
+
+const vinGenerator = () => {
+  let LETTERS = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  let NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+  let structure = "NLLBBBBLCLLNNNNNN";
+  let vin = "";
+
+  for (let char of structure) {
+    if (char == "N") {
+      vin += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    } else if (char == "L") {
+      vin += LETTERS[Math.floor(Math.random() * LETTERS.length)];
+    } else if (char == "B") {
+      vin +=
+        NUMBERS.concat(LETTERS)[
+          Math.floor(Math.random() * NUMBERS.concat(LETTERS).length)
+        ];
+    } else if (char == "C") {
+      vin += NUMBERS.concat(["X"])[
+        Math.floor(Math.random() * NUMBERS.concat(["X"]).length)
+      ];
+    }
+  }
+  return vin;
 };
 
 describe("Tests", function () {
@@ -190,5 +240,12 @@ describe("Tests", function () {
       false,
       "VINs must be exactly 17 chars long"
     );
+  });
+
+  it("Random Tests", function () {
+    for (let i = 0; i < 100; i++) {
+      let vin = vinGenerator();
+      assert.strictEqual(checkVinSolution(vin), checkVin(vin));
+    }
   });
 });

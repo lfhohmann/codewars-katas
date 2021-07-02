@@ -1,4 +1,4 @@
-LETTERS = {
+const LETTERS = {
   A: 1,
   B: 2,
   C: 3,
@@ -24,7 +24,7 @@ LETTERS = {
   Z: 9,
 };
 
-WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
+const WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
 
 const checkVin = (vin) => {
   if (vin.length != 17) {
@@ -51,7 +51,3 @@ const checkVin = (vin) => {
     return vin[8] == check_digit;
   }
 };
-
-let result = checkVin("7JTRH08L5EJ234829");
-
-console.log(result);
