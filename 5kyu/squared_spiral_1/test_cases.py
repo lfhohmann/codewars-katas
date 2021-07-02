@@ -145,8 +145,8 @@ def tests():
 
     @test.it("Small Numbers Random Tests")
     def small_numbers_random_tests():
-        random_tests(450, 0, 100_000)
+        random_tests(500_000, 0, 100_000)
 
     @test.it("Large Numbers Random Tests")
     def large_numbers_random_tests():
-        random_tests(450, 100_000_000_000, 100_000_000_000_000)
+        random_tests(500_000, 100_000_000_000, 100_000_000_000_000)
