@@ -42,3 +42,6 @@ def squared_spiral(x, y):
         counter += 1
 
     return counter
+
+
+print(squared_spiral(10, 10))
