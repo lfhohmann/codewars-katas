@@ -3,4 +3,4 @@
 
 # Codewars Katas
 
-My authored katas for codewars
+My authored katas for codewars.
