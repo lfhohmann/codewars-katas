@@ -1,9 +1,0 @@
-tests: 100
-functions:
-  squared_spiral:
-    x:
-      min: -100
-      max: 100
-    y:
-      min: -100
-      max: 100
